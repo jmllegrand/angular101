@@ -1,4 +1,5 @@
-import {Component} from "@angular/core";
+import {Component, OnInit} from "@angular/core";
+import {ProductsService} from "./products.service";
 /**
  * Created by jmlegrand on 05/04/17.
  */
@@ -16,8 +17,17 @@ import {Component} from "@angular/core";
   `
 })
 
-export class ProductsComponent {
+export class ProductsComponent implements OnInit {
 
-  products: Array<String> = ["Learning Angular", "Pro Angular"];
+  products: Array<String>;
+
+  constructor(private service: ProductsService) {
+  }
+
+
+  ngOnInit() {
+    this.products = this.service.getProducts();
+  }
+
 
 }
