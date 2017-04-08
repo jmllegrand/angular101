@@ -15,7 +15,7 @@ import {NewsService} from "../news.service";
         {{data.released | date: "dd/MM/yy"}}
         <jml-rating [rating]="data.rating" [numberViews]="data.numberViews"></jml-rating>
         <br>
-        {{data.description}}
+        {{data.description | truncate:100}}
       </div>
     </div>
   `,
@@ -23,6 +23,8 @@ import {NewsService} from "../news.service";
     .media {
       margin-bottom: 20px;
     }
+
+    x
   `]
 })
 export class NewsComponent implements OnInit {

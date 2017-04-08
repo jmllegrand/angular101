@@ -9,13 +9,15 @@ import {ProductsService} from "./products.service";
 import {RatingComponent} from "./rating.component";
 import {NewsComponent} from './news/news.component';
 import {NewsService} from "./news.service";
+import {TruncatePipe} from "./truncate.pipe";
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
     RatingComponent,
-    NewsComponent
+    NewsComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
