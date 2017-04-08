@@ -5,6 +5,14 @@
 import {Component, Input} from "@angular/core";
 @Component({
   selector: "jml-rating",
+  styles: [
+      `
+      .glyphicon-star {
+        color: orange;
+        font-size: 25px;
+      }
+    `
+  ],
   template: `
     <i class="glyphicon"
        [class.glyphicon-star-empty]="rating < 1"
