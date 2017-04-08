@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {NewsService} from "./news.service";
 
 @Component({
   selector: 'app-root',
@@ -7,15 +8,34 @@ import {Component} from '@angular/core';
     <img src="{{imageUrl}}">
     <jml-products></jml-products>
     <button class="btn btn-primary" [class.disabled]="!isValid">Submit</button>
-    <button (click)="onClickMe($event)">Toggle</button>
-    <jml-rating [rating]="3"></jml-rating>
+    <button (click)="onClickMe($event)">Toggle</button> <br>
+    <jml-rating [rating]="3" [numberViews]="34500"></jml-rating> <br>
+    <ul>
+      <li *ngFor=""></li>
+    </ul>
+
+    <ul>
+      <li *ngFor="let aNews of news">
+        <jml-news [data]="aNews"></jml-news>
+      </li>
+    </ul>
+
 
   `
 })
-export class AppComponent {
+
+export class AppComponent implements OnInit {
   title: string = 'My first Angular app!';
   imageUrl: string = "https://www.w3schools.com/html/pic_mountain.jpg";
   isValid: boolean = false;
+  news: Array<any> = [];
+
+  constructor(private newsService: NewsService) {
+  }
+
+  ngOnInit() {
+    this.news = this.newsService.getNews();
+  }
 
   onClickMe($event: any) {
     console.log("an event has been fired", $event);

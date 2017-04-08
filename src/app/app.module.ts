@@ -1,18 +1,21 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {ProductsComponent} from "./products.component";
 import {ProductsService} from "./products.service";
 import {RatingComponent} from "./rating.component";
+import {NewsComponent} from './news/news.component';
+import {NewsService} from "./news.service";
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
-    RatingComponent
+    RatingComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
@@ -20,8 +23,10 @@ import {RatingComponent} from "./rating.component";
     HttpModule
   ],
   providers: [
-    ProductsService
+    ProductsService,
+    NewsService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -11,6 +11,10 @@ import {Component, Input} from "@angular/core";
         color: orange;
         font-size: 25px;
       }
+
+      .glyphicon-star-empty {
+        font-size: 25px;
+      }
     `
   ],
   template: `
@@ -38,13 +42,14 @@ import {Component, Input} from "@angular/core";
        [class.glyphicon-star-empty]="rating < 5"
        [class.glyphicon-star]="rating >= 5" (click)="onClick(5)">
     </i>
+    <span>{{numberViews}}</span>
   `
 })
 
 export class RatingComponent {
 
-  @Input()
-  rating: number = 0;
+  @Input() rating: number = 0;
+  @Input() numberViews: number = 0;
 
   constructor() {
   }
