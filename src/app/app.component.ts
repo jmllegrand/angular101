@@ -14,11 +14,17 @@ import {NewsService} from "./news.service";
       <li *ngFor=""></li>
     </ul>
 
-    <ul>
-      <li *ngFor="let aNews of news">
-        <jml-news [data]="aNews"></jml-news>
-      </li>
-    </ul>
+    <div *ngIf="news.length; else noNewsBlock">
+      <ul>
+        <li *ngFor="let aNews of news">
+          <jml-news [data]="aNews"></jml-news>
+        </li>
+      </ul>
+    </div>
+
+    <ng-template #noNewsBlock>
+      <span>No product to display</span>
+    </ng-template>
 
 
   `
@@ -35,6 +41,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.news = this.newsService.getNews();
+    // this.news = [];
   }
 
   onClickMe($event: any) {

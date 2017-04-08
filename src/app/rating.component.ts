@@ -42,7 +42,15 @@ import {Component, Input} from "@angular/core";
        [class.glyphicon-star-empty]="rating < 5"
        [class.glyphicon-star]="rating >= 5" (click)="onClick(5)">
     </i>
-    <span>{{numberViews}}</span>
+    <span>{{numberViews}}</span> <br>
+    <div [ngSwitch]="rating">
+      <div *ngSwitchCase="1">Poor</div>
+      <div *ngSwitchCase="2">Fair</div>
+      <div *ngSwitchCase="3">Good</div>
+      <div *ngSwitchCase="4">Very Good</div>
+      <div *ngSwitchCase="5">Excellent</div>
+      <div *ngSwitchDefault>Not Rated</div>
+    </div>
   `
 })
 
