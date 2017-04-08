@@ -8,7 +8,7 @@ export class NewsService {
       {
         title: "Sarkozy et Juppé apportent leur soutien à Fillon",
         imageUrl: "http://s2.lemde.fr/image2x/2017/04/08/534x0/5108043_7_533b_alain-juppe-nicolas-sarkozy-et-francois_33a71479e0f7c4389c63b3afef4d047a.jpg",
-        released: "08-04-2017",
+        released: new Date(2017, 3, 8),
         rating: "4",
         description: `
       Dans sa campagne agitée comme des montagnes russes, où les descentes ont été plus nombreuses et violente que les montées, 
@@ -20,7 +20,7 @@ export class NewsService {
       {
         title: "Bruno Le Maire annonce qu’il votera pour François Fillon à l’élection présidentielle",
         imageUrl: "http://s2.lemde.fr/image2x/2017/04/08/534x0/5108188_6_6993_bruno-le-maire-le-26-septembre-2016_138a3be253aee4567af1c53088c4e5ad.jpg",
-        released: "08-04-2017",
+        released: new Date(2017, 3, 8),
         rating: "3",
         description: `
       Bruno Le Maire, qui avait démissionné de l’équipe de campagne de François Fillon, a déclaré samedi dans la presse qu’il voterait pour 

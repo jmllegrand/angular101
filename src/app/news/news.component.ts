@@ -12,7 +12,7 @@ import {NewsService} from "../news.service";
       </div>
       <div class="media-body">
         <h4 class="media-heading">{{data.title}}</h4>
-        {{data.released}}
+        {{data.released | date: "dd/MM/yy"}}
         <jml-rating [rating]="data.rating" [numberViews]="data.numberViews"></jml-rating>
         <br>
         {{data.description}}
