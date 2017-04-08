@@ -8,7 +8,7 @@ import {Component} from '@angular/core';
     <jml-products></jml-products>
     <button class="btn btn-primary" [class.disabled]="!isValid">Submit</button>
     <button (click)="onClickMe($event)">Toggle</button>
-    <jml-rating></jml-rating>
+    <jml-rating [rating]="3"></jml-rating>
 
   `
 })
