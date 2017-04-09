@@ -10,6 +10,7 @@ import {RatingComponent} from "./rating.component";
 import {NewsComponent} from './news/news.component';
 import {NewsService} from "./news.service";
 import {TruncatePipe} from "./truncate.pipe";
+import {JumboTronComponent} from "./jumbotron.component";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {TruncatePipe} from "./truncate.pipe";
     ProductsComponent,
     RatingComponent,
     NewsComponent,
-    TruncatePipe
+    TruncatePipe,
+    JumboTronComponent
   ],
   imports: [
     BrowserModule,

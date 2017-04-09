@@ -23,8 +23,6 @@ import {NewsService} from "../news.service";
     .media {
       margin-bottom: 20px;
     }
-
-    x
   `]
 })
 export class NewsComponent implements OnInit {

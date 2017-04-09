@@ -10,10 +10,14 @@ import {NewsService} from "./news.service";
     <button class="btn btn-primary" [class.disabled]="!isValid">Submit</button>
     <button (click)="onClickMe($event)">Toggle</button> <br>
     <jml-rating [rating]="3" [numberViews]="34500"></jml-rating> <br>
-    <ul>
-      <li *ngFor=""></li>
-    </ul>
 
+    <jml-jumbotron [header]="'myheader'" [footer]="'my footer'">
+      <div class="card-block">
+        <h4 class="heading">You can put any content here</h4>
+        <p class="body">For example this line of text and</p>
+        <a href="#" class="button">This button</a>
+      </div>
+    </jml-jumbotron>
     <div *ngIf="news.length; else noNewsBlock">
       <ul>
         <li *ngFor="let aNews of news">
