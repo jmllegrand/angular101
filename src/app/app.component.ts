@@ -4,8 +4,10 @@ import {NewsService} from "./news.service";
 @Component({
   selector: 'app-root',
   template: `
+
     <h1>{{title}}</h1>
-    <img src="{{imageUrl}}">
+
+    <!--img src="{{imageUrl}}">
     <jml-products></jml-products>
     <button class="btn btn-primary" [class.disabled]="!isValid">Submit</button>
     <button (click)="onClickMe($event)">Toggle</button> <br>
@@ -17,7 +19,10 @@ import {NewsService} from "./news.service";
         <p class="body">For example this line of text and</p>
         <a href="#" class="button">This button</a>
       </div>
-    </jml-jumbotron>
+    </jml-jumbotron-->
+
+    <jml-user-form></jml-user-form>
+
     <div *ngIf="news.length; else noNewsBlock">
       <ul>
         <li *ngFor="let aNews of news">

@@ -11,6 +11,7 @@ import {NewsComponent} from './news/news.component';
 import {NewsService} from "./news.service";
 import {TruncatePipe} from "./truncate.pipe";
 import {JumboTronComponent} from "./jumbotron.component";
+import {UserFormComponent} from './user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {JumboTronComponent} from "./jumbotron.component";
     RatingComponent,
     NewsComponent,
     TruncatePipe,
-    JumboTronComponent
+    JumboTronComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
