@@ -9,12 +9,21 @@ import {User} from "../user";
       <form>
         <div class="form-group">
           <label for="firstName">First Name</label>
-          <input type="text" class="form-control" id="firstName" required>
+          <input type="text" class="form-control" id="firstName" required
+                 [(ngModel)]="model.firstName" name="firstName">
         </div>
 
         <div class="form-group">
           <label for="lastName">Last Name</label>
           <input type="text" class="form-control" id="lastName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country</label>
+          <input type="text" class="form-control" id="country">
+          <select class="form-control" id="country">
+            <option *ngFor="let country of countries" [value]="country">{{country}}</option>
+          </select>
         </div>
 
         <button type="submit" class="btn btn-default">Submit</button>
@@ -26,7 +35,7 @@ import {User} from "../user";
 })
 export class UserFormComponent implements OnInit {
 
-  countries: Array<string> = ["US", "France", "India", "Japan"];
+  countries: Array<string> = ["France", "US", "India", "Japan"];
   model: User = new User("jm", 'legrand');
 
   constructor() {
